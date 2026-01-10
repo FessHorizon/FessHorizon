@@ -35,6 +35,23 @@ window.addEventListener('scroll', () => {
     }
 });
 
+// Contact Form Submission Handler
+document.addEventListener('DOMContentLoaded', function() {
+    const form = document.getElementById('contactForm');
+    const successMessage = document.getElementById('successMessage');
+    
+    // Check if we're returning from FormSubmit
+    const urlParams = new URLSearchParams(window.location.search);
+    if (urlParams.has('submitted')) {
+        successMessage.style.display = 'block';
+        form.reset();
+        // Scroll to the success message
+        successMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        // Remove the parameter from URL
+        window.history.replaceState({}, document.title, window.location.pathname);
+    }
+});
+
 // Smooth scrolling
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
