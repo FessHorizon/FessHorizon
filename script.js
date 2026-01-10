@@ -35,17 +35,6 @@ window.addEventListener('scroll', () => {
     }
 });
 
-// Form submission
-function handleSubmit(event) {
-    event.preventDefault();
-    const formData = new FormData(event.target);
-    const data = Object.fromEntries(formData);
-    
-    alert('Thank you for contacting Fess Horizon! We will get back to you shortly.\n\nYour details:\nName: ' + data.name + '\nEmail: ' + data.email + '\nService: ' + data.service);
-    
-    event.target.reset();
-}
-
 // Smooth scrolling
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
