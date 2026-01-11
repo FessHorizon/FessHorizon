@@ -407,6 +407,10 @@ nav.scrolled {
     text-align: center;
     box-shadow: 0 5px 20px rgba(0,0,0,0.08);
     transition: all 0.3s;
+    text-decoration: none;
+    display: block;
+    color: inherit;
+    cursor: pointer;
 }
 
 .contact-info-card:hover {
